@@ -9,7 +9,8 @@ const pool = new Pool({
 const getUsers = (request, response) => {
   pool.query('SELECT * FROM pd ORDER BY id ASC', (error, results) => {
     if (error) {
-      throw error
+      response.send(error)
+     // throw error
     }
     response.status(200).json(results.rows)
   })
