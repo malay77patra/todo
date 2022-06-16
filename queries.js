@@ -14,6 +14,7 @@ const getUsers = (request, response) => {
     response.status(200).json(results.rows)
   })
 }
+/*
 const createUser = (request, response) => {
   const { name, email } = request.body
 
@@ -49,9 +50,10 @@ const deleteUser = (request, response) => {
     response.status(200).send(`User deleted with ID: ${id}`)
   })
 }
+*/
 module.exports = {
   getUsers,
-  createUser,
-  updateUser,
-  deleteUser, 
+//  createUser,
+//  updateUser,
+//  deleteUser, 
 }
